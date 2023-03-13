@@ -1,0 +1,223 @@
+// Typography
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  margin-top: 0;
+  color: var(--color-dark-grey);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.page_item a {
+  //margin-bottom: 1rem;
+  margin-top: 0;
+  color: var(--color-black);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+
+  @media (min-width: #{$screen-sm}) {
+    // margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    // margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.big-h1 {
+  font-weight: $type-bold;
+  font-size: 3.5rem;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 5.4rem;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 7.6rem;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    font-size: 8rem;
+  }
+}
+
+h1,
+.h1 {
+  font-family: $headline-font;
+  font-weight: $type-bold;
+  font-size: 3.25rem;
+
+  @media (min-width: #{$screen-sm}) {
+    font-size: 3.75rem;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 4rem;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    font-size: 4.25rem;
+  }
+}
+
+h2,
+.h2 {
+  font-family: $headline-font;
+  font-weight: $type-bold;
+  font-size: 3rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 3.5rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 3.85rem;
+  }
+}
+
+h3,
+.h3 {
+  font-family: $headline-font;
+  font-weight: $type-bold;
+  font-size: 2.5rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 2.875rem;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 3rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 3.25rem;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: $type-mid;
+  font-family: $headline-font;
+  font-size: 1.75rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 2.125rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 2.875rem;
+  }
+}
+
+h5,
+.h5 {
+  font-weight: $type-mid;
+  font-family: $headline-font;
+  font-size: 1.25rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 1.75rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 2rem;
+  }
+}
+
+h6,
+.h6,
+.menu-item a {
+  font-weight: $type-mid;
+  font-family: $text-font;
+  font-size: 1.125rem;
+
+  @media (min-width: #{$screen-md}) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 1.85rem;
+  }
+}
+
+a {
+  margin-top: 0;
+  color: initial;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: $type-thin;
+  font-family: $text-font;
+  font-size: 1.35rem;
+
+  @media (min-width: #{$screen-sm}) {
+    margin-bottom: 1.25rem;
+    font-size: 1.45rem;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    margin-bottom: 1.75rem;
+    font-size: 1.5rem;
+  }
+}
+
+p,
+.p {
+  margin-top: 0;
+  color: initial;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: $type-thin;
+  font-family: $text-font;
+  font-size: 1.125rem;
+
+  @media (min-width: #{$screen-sm}) {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    margin-bottom: 1.75rem;
+    font-size: 1.4rem;
+  }
+}
+
+li {
+  margin-top: 0;
+  color: $text-color;
+  font-weight: $type-thin;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.font-bold-title {
+  font-weight: $type-bold;
+  letter-spacing: 3px;
+}
+
+.font-bold {
+  font-weight: $type-bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+// p {
+//   width: clamp (45ch, 50%, 75ch );
+// }
+
+.ninja-forms-field {
+  font-family: $text-font !important;
+}

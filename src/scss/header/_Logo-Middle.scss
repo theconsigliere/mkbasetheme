@@ -1,0 +1,246 @@
+.LogoMiddle {
+  @include center-start;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.LogoMiddle__left {
+  flex: 1;
+  @include center-start;
+}
+
+.LogoMiddle__right {
+  flex: 1;
+  @include center-end;
+}
+
+.LogoMiddle__middle {
+  flex: 2;
+  @include center-center;
+}
+
+.LogoMiddle__toggle {
+}
+
+.LogoMiddle__logo {
+  aspect-ratio: 16/9;
+  margin: 0;
+  max-height: 10rem;
+  @include center-center;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.LogoMiddle__btn {
+  margin: 0;
+}
+
+.LogoMiddle__Fullscreen {
+  background-color: var(--color-white);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  // visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.39, 0.17, 0.09, 0.85);
+  pointer-events: none;
+  @include center-center-column;
+
+  &.js-open {
+    opacity: 1;
+    //  visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.LogoMiddle__Fullscreen__inner {
+  padding: 1rem;
+  width: 90%;
+  @include center-between-column;
+  max-height: 85%;
+
+  @media (min-width: #{$screen-md}) {
+    // padding: 5rem;
+    width: 75%;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-between;
+  }
+}
+
+.LogoMiddle__socials {
+  margin: 2rem 0;
+  width: 100%;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-top: 4rem;
+    width: auto;
+  }
+}
+
+.LogoMiddle__nav-group {
+  @include start-start-column;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: #{$screen-lg}) {
+    width: auto;
+  }
+}
+
+.LogoMiddle__nav {
+  @include start-start-column;
+  width: 100%;
+
+  @media (min-width: #{$screen-lg}) {
+    width: auto;
+  }
+}
+
+.LogoMiddle__link {
+  font-size: 2.2rem;
+  @include center-between;
+  margin: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 4.5rem;
+  }
+}
+
+.LogoMiddle__menu-item {
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.LogoMiddle__menu-item--mask {
+  overflow: hidden;
+  @include center-between;
+}
+
+.LogoMiddle__item--toggle {
+  cursor: pointer;
+  margin-left: 2rem;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  display: flex;
+  will-change: background;
+  transition: background 0.4s ease-in-out;
+
+  &.js-open {
+    .toggle__circle--circle {
+      stroke-dashoffset: 0;
+    }
+
+    .toggle--arrow {
+      transform: rotate(180deg) translate(50%, 50%);
+    }
+  }
+
+  &:hover {
+    // background: var(--color-light-grey);
+
+    .toggle__circle--circle {
+      stroke-dashoffset: 0;
+    }
+
+    .toggle--arrow {
+      transform: rotate(180deg) translate(50%, 50%);
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .toggle__circle--circle {
+    stroke: var(--color-grey);
+    stroke-width: 0.2rem;
+    fill: transparent;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+    transition: stroke-dashoffset 0.3s cubic-bezier(0.08, 0.99, 0.78, 0.75);
+  }
+
+  path {
+    fill: var(--color-black);
+  }
+
+  .toggle--arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+  }
+}
+
+.LogoMiddle__menu-item-has-children {
+  border: none;
+  background: none;
+  margin: 0;
+}
+
+.LogoMiddle__SubMenu {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.LogoMiddle__SubMenu--inner {
+  @include start-start-column;
+}
+
+.LogoMiddle__SubMenu-link {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 2.2rem;
+  position: relative;
+  padding-left: 3rem;
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 1.8rem;
+    padding-left: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    background: var(--color-black);
+
+    @media (min-width: #{$screen-lg}) {
+      content: none;
+    }
+  }
+}
+
+.LogoMiddle__Search {
+  display: none;
+  margin: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    display: block;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    transform: rotateY(180deg);
+    cursor: pointer;
+    margin: 2rem;
+  }
+}

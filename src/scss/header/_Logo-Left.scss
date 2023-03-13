@@ -1,0 +1,87 @@
+.LogoLeft {
+  @include center-start;
+  width: 100%;
+  padding: 2.125rem 0;
+}
+
+.LogoLeft__logo-group {
+  flex: 1 auto;
+}
+
+.LogoLeft__logo {
+  margin: 0;
+  display: block;
+
+  img {
+    max-height: 4.5rem;
+    width: auto;
+
+    @media (min-width: #{$screen-lg}) {
+      max-height: 3.5rem;
+    }
+  }
+}
+
+.LogoLeft__nav-group {
+  margin-right: 4rem;
+  display: none;
+
+  @media (min-width: #{$screen-lg}) {
+    display: flex;
+  }
+}
+
+.LogoLeft__navigation {
+  flex: 3 auto;
+  @include center-end;
+}
+
+.LogoLeft__socials {
+  display: none;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-end;
+  }
+}
+
+.LogoLeft__toggle {
+  display: block;
+
+  @media (min-width: #{$screen-lg}) {
+    display: none;
+  }
+}
+
+.LogoLeft__Search {
+  display: none;
+  margin: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    display: block;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: var(--color-black);
+    transform: rotateY(180deg);
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+}
+
+.LogoLeft__menu-item {
+  &--no-children {
+  }
+
+  &--has-children {
+  }
+}
+
+.LogoLeft__item-has-children--inner {
+  @include center-between;
+}
+
+.LogoLeft__link {
+  margin: 0;
+  font-weight: $type-mid;
+}

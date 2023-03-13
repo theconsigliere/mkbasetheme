@@ -1,0 +1,60 @@
+{
+    "key": "group_6179460c99d3a",
+    "title": "Block: Video Embed",
+    "fields": [
+        {
+            "key": "field_617946228652a",
+            "label": "Video Link",
+            "name": "video_link",
+            "type": "oembed",
+            "instructions": "Copy + Paste your video link here:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": 1920,
+            "height": 1080
+        },
+        {
+            "key": "field_62bd7262f3d8c",
+            "label": "HTML Anchor",
+            "name": "html_anchor",
+            "type": "text",
+            "instructions": "Enter a word or two — without spaces — to make a unique web address just for this block, called an “anchor.” Then, you’ll be able to link directly to this section of your page.\r\n\r\n<a href=\"https:\/\/wordpress.org\/support\/article\/page-jumps\/\" target=\"_blank\" rel=\"external noreferrer noopener\">Learn more about anchors<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/video-embed"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1656582763
+}

@@ -1,0 +1,119 @@
+{
+    "key": "group_61028becc5f8f",
+    "title": "Block: Testimonials",
+    "fields": [
+        {
+            "key": "field_61028c68588a6",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Will grab the testimonials from the backend, automatically! Don't even have to select them. The wonder of custom web development ...",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6124e5274e185",
+            "label": "How many Testimonials do you want?",
+            "name": "how_many_testimonials_do_you_want",
+            "type": "number",
+            "instructions": "Please put -1 for all",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": -1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6124e3fe59694",
+            "label": "Button",
+            "name": "button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_62d80d4b1c1e9",
+            "label": "Slideshow Speed",
+            "name": "slideshow_speed",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3000,
+            "min": 1000,
+            "max": 10000,
+            "step": 100,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62d80cdd4cce2",
+            "label": "HTML Anchor",
+            "name": "html_anchor",
+            "type": "text",
+            "instructions": "Enter a word or two — without spaces — to make a unique web address just for this block, called an “anchor.” Then, you’ll be able to link directly to this section of your page.\r\n\r\n<a href=\"https:\/\/wordpress.org\/support\/article\/page-jumps\/\" target=\"_blank\" rel=\"external noreferrer noopener\">Learn more about anchors<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658326398
+}

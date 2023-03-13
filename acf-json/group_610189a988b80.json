@@ -1,0 +1,49 @@
+{
+    "key": "group_610189a988b80",
+    "title": "Cursor",
+    "fields": [
+        {
+            "key": "field_610189d3b8d4a",
+            "label": "Activate Custom Cursor",
+            "name": "activate_custom_cursor",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "activate": "Activate",
+                "deactivate": "Deactivate"
+            },
+            "default_value": "deactivate",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1627492442
+}

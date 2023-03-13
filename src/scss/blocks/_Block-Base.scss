@@ -1,0 +1,104 @@
+// BLock Base
+
+/* Custom Editor Styles */
+
+.wp-block {
+  .blog__holder {
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $headline-font;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 1.5em;
+  }
+
+  h2 {
+    font-size: 25px;
+    line-height: 1.5em;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  h6 {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  p,
+  a {
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .btn--main,
+  .btn--block,
+  .underline-button {
+    line-height: 2.8rem;
+    height: 2.8rem;
+    padding: 0 1.5rem;
+  }
+
+  input {
+    //height: 2rem !important;
+  }
+
+  input[type='submit'] {
+    height: initial !important;
+  }
+}
+
+// Further Gutenberg styles
+
+.entry-content {
+  .alignfull {
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    max-width: 100vw;
+  }
+
+  .alignwide {
+    margin-right: calc(25% - 25vw);
+    margin-left: calc(25% - 25vw);
+    max-width: 1000%;
+    width: auto;
+  }
+
+  .alignwide img,
+  .alignfull img {
+    display: block;
+    margin: 0 auto;
+  }
+}

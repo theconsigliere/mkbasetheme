@@ -1,0 +1,136 @@
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.container {
+  max-width: 90%; // adjust to your content width or remove for full-width
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 85%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 80%;
+  }
+
+  @media (min-width: #{$screen-xxxl}) {
+    max-width: 75%;
+  }
+}
+
+// Blockquote
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+blockquote {
+  border-left: 0.3rem solid var(--color-light-grey);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 1.5rem;
+}
+
+// Divider
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+hr {
+  border: 0;
+  border-top: 0.1rem solid var(--color-light-grey);
+  margin: 3rem 0;
+}
+
+// Underline
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.underline {
+  height: 1px;
+  width: 100%;
+  background: var(--color-black);
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0;
+  }
+
+  &--white {
+    background: var(--color-white);
+  }
+}
+
+// Exras
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.stroke {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+
+  &--black {
+    -webkit-text-stroke-color: var(--color-black);
+  }
+  &--white {
+    -webkit-text-stroke-color: var(--color-white);
+  }
+  &--grey {
+    -webkit-text-stroke-color: var(--color-grey);
+  }
+}
+
+.sticky {
+  position: initial;
+
+  @media (min-width: #{$screen-lg}) {
+    position: sticky;
+  }
+}
+
+.middle {
+  text-align: center;
+}
+
+// Code
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+code {
+  background: var(--color-light-grey);
+  border-radius: 0.4rem;
+  font-size: 86%;
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+pre {
+  background: var(--color-light-grey);
+  border-left: 0.3rem solid var(--color-black);
+  overflow-y: hidden;
+
+  & > code {
+    border-radius: 0;
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+  }
+}
+
+// Contact form 7
+// -------------------------------------------------------
+
+.wpcf7 {
+  input {
+    border: 1px solid var(--color-light-grey);
+  }
+
+  textarea {
+    border: 1px solid var(--color-light-grey);
+
+    &:focus {
+      border-color: var(--color-black);
+    }
+  }
+
+  label {
+    @extend .p !optional;
+  }
+
+  input[type='submit'] {
+    @extend .btn--block !optional;
+  }
+}

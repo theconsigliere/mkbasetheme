@@ -1,0 +1,27 @@
+/*********************
+IMPORTING BASE
+*********************/
+
+@import 'base/Variables';
+@import 'base/Mixins';
+@import 'base/Utils';
+@import 'blocks/Block-Base';
+@import 'base/Button';
+@import 'base/Global';
+@import 'core/Swiper';
+
+/*********************
+
+IMPORTING GUTTENBERG BLOCKS
+*********************/
+
+// Blocks
+@import 'blocks/styles/Hero';
+@import 'blocks/styles/Media';
+@import 'blocks/styles/Layout';
+@import 'blocks/styles/Post';
+@import 'blocks/styles/Text';
+
+//Post
+@import 'post/Post-Blocks';
+@import 'post/Post-Item';

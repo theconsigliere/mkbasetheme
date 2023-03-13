@@ -1,0 +1,62 @@
+{
+    "key": "group_607c5c8fd7338",
+    "title": "Settings: Analytics",
+    "fields": [
+        {
+            "key": "field_607c5cc610286",
+            "label": "Google Analytics",
+            "name": "google_analytics",
+            "type": "wysiwyg",
+            "instructions": "Login into your Google Account and paste the analytics code here!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_607c5cff10287",
+            "label": "Facebook Pixel",
+            "name": "facebook_pixel",
+            "type": "wysiwyg",
+            "instructions": "Login to your Facebook account and copy and paster the code into here! And if by magic it will work.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-analytics"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1618763488
+}

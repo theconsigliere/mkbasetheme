@@ -1,0 +1,350 @@
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+// The base font-size is set at 62.5% for having the convenience
+// of sizing rems in a way that is similar to using px: 1.6rem = 16px
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+// Default body styles
+body {
+  color: var(--color-black);
+  background: var(--color-white);
+  font-family: $text-font;
+  font-size: 1.6em; // Currently ems cause chrome bug misinterpreting rems on body element
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  margin: 0;
+
+  // Adjust for your type
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#smooth-wrapper {
+  transition: transform 0.6s cubic-bezier(0.08, 0.99, 0.33, 1);
+  overflow: hidden;
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Link
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    // color: var(--color-dark-grey);
+  }
+
+  &:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.page_item a {
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: var(--color-dark-grey);
+  }
+
+  &:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+dl,
+ol,
+ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+
+  dl,
+  ol,
+  ul {
+    font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+  }
+}
+
+// Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Image
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[data-lazy-src] {
+  opacity: 0;
+}
+
+img.lazyloaded {
+  -webkit-transition: opacity 0.5s linear 0.2s;
+  -moz-transition: opacity 0.5s linear 0.2s;
+  transition: opacity 0.5s linear 0.2s;
+  opacity: 1;
+}
+
+li#text-3 {
+  list-style: none;
+}
+
+//WORDPRESS BODY CLASSES
+//style a page via class
+
+.error404 {
+  .search-outer {
+    padding: 1.5em 0;
+  }
+
+  .search-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  input[type='search'] {
+    margin: 0 1em 0 0;
+    height: 40px;
+    min-width: 250px;
+  }
+
+  .search-submit {
+    width: 100px;
+  }
+}
+
+.page-blog {
+  .entry-content {
+    // keep new Gutenberg image styles in check for blog page
+    .alignfull,
+    .alignwide {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+/* post meta */
+.byline-wrap {
+  margin-bottom: 1.5em;
+
+  .byline {
+    time {
+    }
+  }
+}
+
+.entry-content {
+  table {
+    margin-bottom: 1.5em;
+    width: 100%;
+    border: 1px solid var(--color-light-grey);
+
+    caption {
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color-light-grey);
+
+    &:nth-child(even) {
+      background-color: var(--color-light-grey);
+    }
+  }
+
+  td {
+    padding: 7px;
+    border-right: 1px solid var(--color-light-grey);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  th {
+    border-right: 1px solid var(--color-light-grey);
+    border-bottom: 1px solid var(--color-light-grey);
+    background-color: var(--color-light-grey);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+// Utility
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Clear a float with .clearfix
+.clearfix {
+  &:after {
+    clear: both;
+    content: ' '; // The space content is one way to avoid an Opera bug.
+    display: table;
+  }
+}
+
+// Float either direction
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+//SCREEN READER STYLES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.screen-reader-text:focus {
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+
+  /* Above WP toolbar. */
+  display: block;
+  clip: auto !important;
+  padding: 15px 23px 14px;
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+  background-color: var(--color-light-grey);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  color: #21759b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.875rem;
+  font-size: 14px;
+  line-height: normal;
+}
+
+// MAILCHIMP STYLES
+
+#mc_embed_signup {
+  form {
+    margin-bottom: 0;
+  }
+
+  label {
+    color: var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    display: none;
+  }
+
+  input.email {
+    background: var(--color-white) !important;
+    border-color: var(--color-black) !important;
+  }
+
+  input {
+    margin: 0;
+    height: 3.8rem;
+    border: 1px solid var(--color-black);
+    @extend p;
+  }
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+}
+
+#mc-embedded-subscribe {
+  background: var(--color-black);
+  color: var(--color-white) !important;
+  width: 100%;
+  padding: 0 15px;
+}
+
+a.disable {
+  pointer-events: none;
+}
+
+.lineParent {
+  overflow: hidden;
+}
+
+.overlay-black {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  transition: all 0.3s ease;
+}
+
+// Spacing
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// .button,
+// button,
+// dd,
+// dt {
+//   margin-bottom: 1rem;
+// }
+
+// fieldset,
+// input,
+// select,
+// textarea {
+//   margin-bottom: 1.5rem;
+// }
+
+// blockquote,
+// dl,
+// figure,
+// form,
+// p,
+// pre,
+// table {
+//   margin-bottom: 2.5rem;
+// }

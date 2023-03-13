@@ -1,0 +1,93 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded (if admin.php is setup in your
+functions file) on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+
+body.login {
+  h1 {
+    margin: 0 auto;
+  }
+}
+
+#login {
+}
+
+/* the form box */
+
+/*
+Add a custom logo to the WordPress login. Clients really like their logo here.
+Just create image at least 400x400 and replace images/login-logo@2x.png.
+Now with square image and retina by default.
+*/
+.login h1 a {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 65px;
+  width: 150px;
+  background-size: 150px 65px;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  text-indent: -9999px;
+}
+
+.login form {
+  margin-left: 8px;
+  padding: 26px 24px 46px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  //color: white;
+  box-shadow: none;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+
+  .input {
+    margin-top: 2px;
+    margin-right: 6px;
+    margin-bottom: 16px;
+    padding: 3px;
+    width: 97%;
+    outline: none;
+    color: black;
+    border: 1px solid black;
+    box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif !important;
+  }
+
+  input[type='checkbox'] {
+    // background: #000000;
+  }
+}
+
+.login .message,
+.login .success {
+  color: black;
+}
+
+.login a {
+  color: white;
+}
+
+/*
+You'll have to override some of the default styles
+but since we're referencing the id, it should be easy.
+*/
+#wp-submit {
+}
+
+/* login button*/

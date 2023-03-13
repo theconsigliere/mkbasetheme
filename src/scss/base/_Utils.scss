@@ -1,0 +1,26 @@
+// Pricing Table
+// -------------------------------------
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+  background: var(--color-light-grey);
+}
+th,
+td {
+  text-align: left;
+  padding: 4px;
+  border: 1px solid var(--color-black);
+}
+
+.PricingTable {
+  margin: 2rem 0;
+}
+
+.PricingTable__inner {
+}
+
+// End of Pricing Table
+// -------------------------------------

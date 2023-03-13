@@ -1,0 +1,163 @@
+{
+    "key": "group_5eefb259c24b6",
+    "title": "Post: Post Display",
+    "fields": [
+        {
+            "key": "field_5eefb259cedcc",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62dfec9748141",
+            "label": "Show Filter",
+            "name": "show_filter",
+            "type": "select",
+            "instructions": "Select to show the category blog filter.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Show me a filter please!",
+                "no": "I don't need one thanks"
+            },
+            "default_value": "yes",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62dfeccf48142",
+            "label": "How many Posts to a row?",
+            "name": "post_number",
+            "type": "range",
+            "instructions": "How many posts would you like to show per row. On tablet and mobile this defaults to 2 per row, then just 1 per row on mobile.\r\n\r\n2 posts displays 4 in total\r\n3 posts displays 9 in total\r\n4 posts displays 8 in total\r\n5 posts displays 10 in total",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 2,
+            "max": 5,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_62e00ca17fd17",
+            "label": "Select Category Type",
+            "name": "select_category",
+            "type": "select",
+            "instructions": "Select to show a default category on page load.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Select category",
+                "no": "No show latest posts instead"
+            },
+            "default_value": "no",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62dfec1e48140",
+            "label": "Select Posts",
+            "name": "select_posts",
+            "type": "taxonomy",
+            "instructions": "If blog filter is hidden, archive will just display chosen selected post types. If blog filter is shown this will just be the default posts. \r\n\r\nChoose Null for all posts.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62e00ca17fd17",
+                        "operator": "==",
+                        "value": "yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_62dfeb16dbece",
+            "label": "HTML Anchor",
+            "name": "html_anchor",
+            "type": "text",
+            "instructions": "Enter a word or two — without spaces — to make a unique web address just for this block, called an “anchor.” Then, you’ll be able to link directly to this section of your page.\r\n\r\n<a href=\"https:\/\/wordpress.org\/support\/article\/page-jumps\/\" target=\"_blank\" rel=\"external noreferrer noopener\">Learn more about anchors<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/post-display"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658857079
+}

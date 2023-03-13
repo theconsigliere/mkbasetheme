@@ -1,0 +1,114 @@
+{
+    "key": "group_62e10263d42d9",
+    "title": "Settings: Favicon",
+    "fields": [
+        {
+            "key": "field_62e10263e1685",
+            "label": "Disclaimer",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display Favicon for website, to generate a favicon for fields below. Use this website: https:\/\/realfavicongenerator.net\/\r\nFavicon for ico, android, safari and microsoft, upload the assets into the root of the folder. \r\nLeave blank if favicon is in theme folder",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_62e10287d7ce9",
+            "label": "Favicon: Apple Touch Icon",
+            "name": "apple_touch_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "post-thumbnail",
+            "library": "all",
+            "min_width": 32,
+            "min_height": 32,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png"
+        },
+        {
+            "key": "field_62e102c2d7cea",
+            "label": "Favicon: 32x32",
+            "name": "favicon_32x32",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "post-thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 32,
+            "max_height": 32,
+            "max_size": "",
+            "mime_types": "png"
+        },
+        {
+            "key": "field_62e10344d7ceb",
+            "label": "Favicon: 16x16",
+            "name": "favicon_16x16",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "post-thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 16,
+            "max_height": 16,
+            "max_size": "",
+            "mime_types": "png"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-display"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658916385
+}

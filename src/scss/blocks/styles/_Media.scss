@@ -1,0 +1,529 @@
+// Full Width Image
+//-----------------------------------------
+
+.FullWidthImage {
+  height: 75rem;
+  margin: 1rem 0;
+}
+
+.FullWidthImage__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &--contained {
+    max-width: 95%;
+    margin: 0 auto;
+
+    @media (min-width: #{$screen-lg}) {
+      max-width: 75%;
+    }
+  }
+  &--full-width {
+    max-width: 100%;
+  }
+}
+
+.FullWidthImage__parallax-image {
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 120%;
+}
+
+.FullWidthImage__text-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 75%;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 55%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    width: 40%;
+  }
+}
+
+.FullWidthImage__title {
+}
+.FullWidthImage__desc {
+  margin-bottom: 1.75rem;
+
+  @media (min-width: #{$screen-xl}) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.FullWidthImage__button {
+  margin: 0 auto;
+}
+
+// END OF Full Width Image
+//-----------------------------------------
+// GALLERY
+
+.Gallery {
+  margin: 2rem 0;
+
+  @media (min-width: #{$screen-xl}) {
+    margin: 4.5rem 0;
+  }
+}
+
+.Gallery__inner {
+}
+
+.Gallery__title {
+  text-align: center;
+}
+
+.Gallery__items {
+  display: flex;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.Gallery__item {
+  flex: 1;
+  aspect-ratio: 4/3;
+  padding: 0.5rem;
+  overflow: hidden;
+  min-width: 100%;
+  cursor: pointer;
+  // 1
+
+  @media (min-width: #{$screen-md}) {
+    // 2
+    min-width: 50%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    // 4
+    min-width: 25%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.Gallery__modal {
+  position: fixed;
+  background: var(--color-white);
+  z-index: 15;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.js-open {
+    opacity: 1;
+    pointer-events: all;
+
+    .Gallery__modal-inner {
+      transform: translateY(0);
+    }
+  }
+}
+
+.Gallery__modal-inner {
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-100vh);
+  transition: all 0.5s;
+  width: 95%;
+  max-height: 70%;
+  // height: calc(100vh - 100px);
+  z-index: 11;
+  overflow: hidden;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 70%;
+    max-height: 70%;
+  }
+
+  @media (min-width: #{$screen-xxxl}) {
+    width: 75%;
+    max-height: 75%;
+  }
+}
+
+.Gallery__figure {
+  height: 100%;
+  margin: 0;
+}
+
+.Gallery__modal-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Gallery__figcaption {
+  padding: 0.75rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 75%;
+  text-align: center;
+}
+
+.Gallery__modal-desc {
+  max-width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 75%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 65%;
+  }
+}
+
+.Gallery__button-group {
+  position: absolute;
+  @include center-center;
+  bottom: 0;
+  padding: 2rem 0;
+  left: 0;
+  right: 0;
+  transform: translateY(0);
+  transition: transform 0.25s 0.6s;
+}
+
+.Gallery__button {
+  @include center-center;
+  background: transparent;
+  cursor: pointer;
+  z-index: 12;
+  border: 1px solid var(--color-light-grey);
+  background: var(--color-white);
+  margin: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 6px #00000026;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+
+  &:hover {
+  }
+
+  svg {
+    width: 80%;
+    height: 80%;
+  }
+
+  svg,
+  rect {
+    fill: var(--color-black);
+  }
+
+  &--close {
+    transform: scale(1.125);
+    padding: 1.75rem;
+  }
+
+  &--next {
+    transform: rotate(90deg);
+
+    @media (min-width: #{$screen-lg}) {
+    }
+  }
+
+  &--prev {
+    transform: rotate(-90deg);
+
+    @media (min-width: #{$screen-lg}) {
+    }
+  }
+}
+
+// END OF GALLERY
+//-----------------------------------------
+// Video Embed
+//---------------------------------------
+
+.VideoEmbed__inner {
+  position: relative;
+  display: block;
+  width: 90%; /* width of iframe wrapper */
+  height: 0;
+  margin: auto;
+  padding: 0% 0% 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+  background: var(--color-black);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.VideoEmbed {
+  padding: 5rem 0;
+}
+
+// End of Video Embed
+//---------------------------------------
+// Image Section
+
+.ImageSection {
+  padding: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 2rem 0;
+  }
+}
+
+.ImageSection__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ImageSection__column {
+  flex: 1;
+  min-width: 100%;
+  // 1
+
+  @media (min-width: #{$screen-md}) {
+    // 2
+    min-width: 50%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    // 4
+    min-width: 25%;
+  }
+}
+
+.ImageSection__column-inner {
+  max-width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  @include center-center-column;
+}
+
+.ImageSection__text-item {
+  padding: 2rem 0;
+  width: 100%;
+}
+.ImageSection__text-inner {
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 80%;
+  }
+}
+
+.ImageSection__text-title {
+}
+.ImageSection__text-desc {
+}
+
+.ImageSection__image-item {
+  height: 100%;
+
+  img {
+    @include img-cover;
+    height: auto;
+  }
+}
+
+.ImageSection__image-figure {
+  margin: 2rem 0;
+}
+
+.ImageSection__image-title {
+}
+
+.ImageSection__image-desc {
+}
+
+// END OF  Image Section
+//-----------------------------------------
+// Slideshow
+//---------------------------------------
+
+.Slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Slideshow__inner {
+  max-width: 95%;
+  margin: 2rem auto;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 4rem auto;
+  }
+}
+
+.Slideshow__wrapper {
+}
+
+.Slideshow__slide {
+  position: relative;
+  margin: 0;
+  height: 100vh !important;
+
+  img {
+    @include img-cover;
+  }
+}
+
+.Slideshow__slide-figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Slideshow__slide-title {
+}
+
+// END OF Slideshow
+//-----------------------------------------
+// Image Side Text Side
+
+.ImageSideTextSide {
+}
+
+.ImageSideTextSide__inner {
+  @include center-between-column;
+  margin: 2rem auto;
+  height: 100vh;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-between;
+  }
+
+  &--left {
+  }
+  &--right {
+    flex-direction: column;
+
+    @media (min-width: #{$screen-lg}) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.ImageSideTextSide__image {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 50%;
+  }
+
+  img {
+    @include img-cover;
+  }
+}
+.ImageSideTextSide__text {
+  width: 100%;
+  height: fit-content;
+  @include center-center;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.ImageSideTextSide__text-inner {
+  width: 90%;
+  margin: 2rem auto;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 75%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    width: 65%;
+  }
+}
+
+.ImageSideTextSide__title {
+}
+
+.ImageSideTextSide__text-group {
+  padding-bottom: 2rem;
+}
+
+.ImageSideTextSide__desc {
+}
+
+// End of Image Side Text Side
+//-----------------------------------------
+// Logo Credentials
+
+.LogoCredentials {
+}
+
+.LogoCredentials__inner {
+  padding: 1rem 0;
+  margin: 0 auto;
+  max-width: 95%;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 90%;
+    padding: 2rem 0;
+  }
+}
+
+.LogoCredentials__title {
+  text-align: center;
+}
+
+.LogoCredentials__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.LogoCredentials__logo {
+  flex: 1;
+  padding: 1.5rem;
+  max-height: 10rem;
+  @include center-center;
+
+  @media (min-width: #{$screen-lg}) {
+    max-height: 12rem;
+    padding: 2rem;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    padding: 2.5rem;
+  }
+
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+//-----------------------------------------
+// End of Logo Credentials

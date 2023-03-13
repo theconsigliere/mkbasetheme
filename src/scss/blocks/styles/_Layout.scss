@@ -1,0 +1,372 @@
+// Accordion
+// ----------------------------------------------
+
+.Accordion {
+}
+
+.Accordion__inner {
+  padding: 2em 0;
+  width: 100%;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 5vh 0;
+  }
+}
+
+.Accordion__item {
+}
+
+.Accordion__column {
+  flex: 1 1 auto;
+  padding-right: 0;
+  padding-bottom: 2vh;
+
+  @media (min-width: #{$screen-lg}) {
+    padding-right: 2vw;
+    padding-bottom: 0;
+  }
+}
+
+.Accordion__item--inner {
+  background: var(--color-light-grey);
+  padding: 1em 2em;
+  @include center-between;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.Accordion__item-icon {
+  @include center-center;
+  height: 100%;
+  margin-right: 0.8rem;
+
+  span {
+    width: 1.6rem;
+    height: 0.4rem;
+    background: var(--color-dark-grey);
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+.Accordion__item-icon--left {
+  transform: translateX(3px) rotate(45deg) translateZ(0px);
+
+  &.js-active {
+    transform: translateX(3px) rotate(0deg) translateZ(0px);
+  }
+}
+
+.Accordion__item-icon--right {
+  transform: translateX(-3px) rotate(-45deg) translateZ(0px);
+
+  &.js-active {
+    transform: translateX(-3px) rotate(0deg) translateZ(0px);
+  }
+}
+
+.Accordion__item-title {
+  margin-bottom: 0;
+}
+
+.Accordian__item-desc {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s $bezier;
+  padding-left: 40px;
+  margin-bottom: 2rem;
+  // transform: translateY(-100%);
+}
+
+// End of Accordion
+// ----------------------------------------------
+// Card Section
+
+.CardSection {
+}
+.CardSection__inner {
+}
+.CardSection__title {
+  text-align: center;
+}
+
+.CardSection__holder {
+  @include center-center-column;
+  margin: 5rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-between;
+  }
+}
+.CardItem {
+  flex: 0 0 100%;
+  margin: 2rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    flex: 0 0 32%;
+    margin: 0;
+  }
+}
+.CardItem__inner {
+  width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 90%;
+  }
+}
+.CardItem__image {
+  height: auto;
+  overflow: hidden;
+  margin: 2rem auto;
+  max-height: 30rem;
+
+  @media (min-width: #{$screen-lg}) {
+    height: 25rem;
+    margin: 0 auto 2rem;
+  }
+
+  img {
+    @include img-cover;
+  }
+}
+
+.CardItem__title {
+  text-align: center;
+}
+.CardItem__desc {
+}
+.CardItem__btn {
+  text-align: center;
+  margin: 2rem auto 0;
+  display: block;
+  width: fit-content;
+}
+
+// End of Card Section
+// ----------------------------------------------
+// Info Boxes
+
+.InfoBoxes {
+}
+
+.InfoBoxes__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: #{$screen-lg}) {
+    flex-direction: row;
+  }
+}
+
+.InfoBox {
+  flex: 1;
+  margin: 2.5rem 1%;
+  border: 1px solid var(--color-light-grey);
+  aspect-ratio: inherit;
+  @include center-center;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0 1%;
+    aspect-ratio: 1/1;
+  }
+}
+
+.InfoBox__counter {
+  font-size: 15vw;
+  color: transparent;
+  font-weight: $type-bold;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+
+  @media (min-width: #{$screen-lg}) {
+    font-size: 10vw;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    font-size: 7vw;
+  }
+}
+
+.InfoBox__inner {
+  max-width: 90%;
+}
+
+.InfoBox__desc {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 90%;
+  }
+}
+.InfoBox__title {
+}
+
+.InfoBox__btn {
+}
+
+// End of Info boxes
+// ----------------------------------------------
+// Icon Grid
+
+.IconGrid {
+}
+
+.InfoGrid__inner {
+  margin: 2rem auto;
+
+  @media (min-width: #{$screen-md}) {
+    margin: 5rem auto;
+  }
+}
+
+.IconGrid__title {
+  text-align: center;
+}
+
+.IconGrid__item-group {
+  @include start-between;
+  flex-wrap: wrap;
+}
+
+.IconGrid__item {
+  padding: 1em;
+  @include center-center-column;
+  border: 1px solid var(--color-light-grey);
+  width: 100%;
+  margin: 1rem 0;
+  flex: 0 0 100%;
+
+  @media (min-width: #{$screen-sm}) {
+    flex: 0 0 45%;
+  }
+
+  @media (min-width: #{$screen-md}) {
+    flex: 0 0 32%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    flex: 0 0 24%;
+  }
+}
+
+.IconGrid__item-icon {
+  margin: 1rem;
+
+  i {
+    font-size: 1.6em;
+  }
+}
+
+.IconGrid__item-title {
+}
+.IconGrid__item-desc {
+}
+
+// End of Icon Grid
+// ------------------------------------------------
+// FAQ Section
+
+.FAQSection {
+}
+
+.FAQSection__inner {
+  max-width: 95%;
+  margin: 2rem auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 90%;
+    margin: 5rem auto;
+  }
+}
+
+.FAQSection__title {
+  text-align: center;
+}
+
+.FAQSection__main {
+  padding: 2rem 0;
+  @include center-center-column;
+
+  @media (min-width: #{$screen-lg}) {
+    @include start-between;
+  }
+}
+
+.FAQSection__item {
+  &--nav {
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 30%;
+    }
+  }
+  &--questions {
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 65%;
+    }
+  }
+}
+
+.FAQSection__nav-summary {
+  padding: 1rem 2rem;
+  background: var(--color-light-grey);
+  border-radius: 0.75rem;
+  font-weight: $type-bold;
+  cursor: pointer;
+}
+
+.FAQSection__nav-detail {
+}
+
+.FAQSection__nav {
+  width: 100%;
+}
+
+.FAQSection__sub-nav {
+}
+
+.FAQSection__sub-item {
+  display: block;
+  margin: 1rem;
+}
+
+.FAQSection__nav-item {
+}
+
+.FAQSection__section-item {
+  margin: 2rem 0;
+  padding: 3rem 2rem;
+  box-shadow: 2px 2px 30px #0000000d;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.FAQSectionn__section-title {
+  margin-left: 5rem;
+  position: relative;
+  padding: 0 1rem;
+
+  &:before {
+    content: '';
+    width: 4rem;
+    height: 1px;
+    background: var(--color-grey);
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+  }
+}
+
+.FAQSection__section-question {
+}
+
+.FAQSection__section-answer {
+}
+
+// End of FAQ Section
+//------------------------------------------------------------

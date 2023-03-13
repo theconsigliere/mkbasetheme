@@ -1,0 +1,63 @@
+.PostItem {
+  display: block;
+  margin: 0;
+  max-width: 50%;
+
+  &--inner {
+    padding: 0 0.5rem;
+
+    @media (min-width: #{$screen-lg}) {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.PostItem__image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+
+  img {
+    vertical-align: bottom;
+    @include img-cover;
+  }
+}
+
+.PostItem__text-group {
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 1rem 0;
+  }
+}
+
+.PostItem__categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.PostItem__category {
+  margin: 0.5rem 0.5rem 0 0;
+  background: var(--color-light-grey);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: $type-mid;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.PostItem__title {
+}
+
+.PostItem__desc {
+}
+
+.PostItem__date {
+}
+
+.PostItem__btn {
+  margin-top: 1rem;
+}

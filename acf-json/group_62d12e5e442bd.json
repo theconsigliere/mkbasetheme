@@ -1,0 +1,104 @@
+{
+    "key": "group_62d12e5e442bd",
+    "title": "Settings: Theme Screenshot",
+    "fields": [
+        {
+            "key": "field_62d12e9a0dee7",
+            "label": "Disclaimer",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This overrides the default theme name & screenshot image . Check it out at <a href=\"\/wp-admin\/themes.php\"> appearance > themes<\/a>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_62d12e74393c5",
+            "label": "Theme Image",
+            "name": "theme_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 1200,
+            "min_height": 900,
+            "min_size": "",
+            "max_width": 1200,
+            "max_height": 900,
+            "max_size": "",
+            "mime_types": "jpg, png"
+        },
+        {
+            "key": "field_62d12e85393c6",
+            "label": "Theme Name",
+            "name": "theme_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62d141df4850a",
+            "label": "Theme Description",
+            "name": "theme_desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your Theme is a super-minimal, stripped-down, responsive, retina-ready theme for your needs.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-display"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657881659
+}

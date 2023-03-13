@@ -1,0 +1,115 @@
+{
+    "key": "group_5ed91060152f0",
+    "title": "Preloader",
+    "fields": [
+        {
+            "key": "field_5ed910602cb5b",
+            "label": "Activate Preloader",
+            "name": "loading_activate",
+            "type": "select",
+            "instructions": "Show Preloader on every page, before page load",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hide": "Hide",
+                "show": "Show"
+            },
+            "default_value": "hide",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_612a5fadcc87c",
+            "label": "Only Show Preloader on Homepage",
+            "name": "show_on_homepage",
+            "type": "select",
+            "instructions": "Just show preloader on homepage and hide on other pages",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ed910602cb5b",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": "hide",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ed910602cb6c",
+            "label": "Preloader Icon",
+            "name": "loading_logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ed910602cb5b",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "post-thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657704523
+}

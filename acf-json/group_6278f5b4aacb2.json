@@ -1,0 +1,250 @@
+{
+    "key": "group_6278f5b4aacb2",
+    "title": "Page: Archive",
+    "fields": [
+        {
+            "key": "field_62d944c3f6ced",
+            "label": "Disclaimer",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "This page is option is for the Archive page, to just show a post display block select a different page template and select post display.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_62d9451cf6cee",
+            "label": "Archive Hero",
+            "name": "archive_hero",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6278f5da0297c",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6278f5df0297d",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_6278f5eb0297e",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "instructions": "Paste in link to contact page",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_62dbd5171780e",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "Displayed above the underline",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Latest News",
+                    "placeholder": "Latest News",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62d94565f6cef",
+            "label": "Archive Grid",
+            "name": "archive_grid",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62d9461af6cf1",
+                    "label": "Show Filter",
+                    "name": "show_filter",
+                    "type": "select",
+                    "instructions": "Select to show the category blog filter.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Show me a filter please!",
+                        "no": "I don't need one thanks"
+                    },
+                    "default_value": "yes",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62d94651f6cf2",
+                    "label": "How many Posts to a row?",
+                    "name": "post_number",
+                    "type": "range",
+                    "instructions": "How many posts would you like to show per row. On tablet and mobile this defaults to 2 per row, then just 1 per row on mobile.\r\n\r\n2 posts displays 4 in total\r\n3 posts displays 9 in total\r\n4 posts displays 8 in total\r\n5 posts displays 10 in total",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 4,
+                    "min": 2,
+                    "max": 5,
+                    "step": "",
+                    "prepend": "",
+                    "append": "Posts"
+                },
+                {
+                    "key": "field_62e011103176c",
+                    "label": "Select Category Type",
+                    "name": "select_category",
+                    "type": "select",
+                    "instructions": "Select to show a default category on page load.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Select category",
+                        "no": "No show latest posts instead"
+                    },
+                    "default_value": "no",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62d945a3f6cf0",
+                    "label": "Select Posts",
+                    "name": "select_posts",
+                    "type": "taxonomy",
+                    "instructions": "If blog filter is hidden, archive will just display chosen selected post types. If blog filter is shown this will just be the default posts.\r\n\r\nChoose Null for all posts.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_62e011103176c",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "archive.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658851796
+}

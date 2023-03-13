@@ -1,0 +1,588 @@
+// Base
+//--------------------------------------------------------------
+
+.Article {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $text-font;
+    margin-top: 0.5rem;
+  }
+}
+
+.Article__container {
+  p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+  a:not(.btn--main, .btn--block) {
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--color-grey);
+    }
+  }
+}
+
+.Article__content {
+  padding: 2rem 0;
+  max-width: 95%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 80%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 70%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 65%;
+  }
+
+  @media (min-width: #{$screen-xxxl}) {
+    max-width: 50%;
+  }
+
+  &--main {
+    margin: 0;
+
+    @media (min-width: #{$screen-lg}) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.Article__content {
+  ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 2rem 0;
+  }
+}
+
+// End of base
+//--------------------------------------------------------------
+// Author Section
+
+.ArticleAuthor {
+  padding: 2rem 0;
+  max-width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-black);
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 95%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 70%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 65%;
+  }
+
+  &--inner {
+    @include center-between-column;
+    background: transparent;
+
+    @media (min-width: #{$screen-lg}) {
+      @include center-between;
+      padding: 2rem;
+    }
+  }
+}
+
+.ArticleAuthor__image {
+  border-radius: 50%;
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  box-shadow: 2px 2px 3px 0px #00000033;
+  background: var(--color-white);
+
+  @media (min-width: #{$screen-lg}) {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  &:not(:first-child) {
+    transform: translate(-25%);
+  }
+}
+
+.Article__author__image {
+  &:not(:first-child) {
+    transform: translate(-25%);
+  }
+}
+
+.ArticleAuthor__details {
+  margin: 1rem 0 0 0;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0 0 0 2rem;
+  }
+}
+
+.ArticleAuthor__written-by {
+  margin-bottom: 0.5rem;
+  text-align: left;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 1rem;
+  }
+}
+
+.ArticleAuthor__image-group {
+  margin: 0;
+  @media (min-width: #{$screen-lg}) {
+    margin: 2rem 0;
+  }
+}
+
+.Archive__author-details {
+  margin: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0 0 0 2rem;
+  }
+}
+
+.ArticleAuthor__authors {
+  margin: 0;
+}
+
+.ArticleAuthor__single-author {
+}
+
+.ArticleAuthor__single-image-group {
+  // @include center-center-column;
+  @include center-start;
+  margin: 1rem 0;
+  width: 90%;
+
+  @media (min-width: #{$screen-lg}) {
+    // @include center-start;
+    margin: 0;
+  }
+
+  .ArticleAuthor__image-group {
+    margin-right: 2rem;
+
+    @media (min-width: #{$screen-lg}) {
+      margin-right: 0;
+    }
+  }
+}
+
+.ArticleAuthor__image-group {
+  // @include center-center-column;
+  @include center-start;
+  margin: 2rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    // @include center-start;
+    margin: 0;
+  }
+}
+
+.ArticleAuthor__buttons {
+  @include center-between;
+  min-width: 40%;
+  margin: 2rem 0;
+  width: 90%;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0;
+    @include center-end;
+    width: auto;
+  }
+}
+
+.ArticleAuthor__btn {
+  margin-right: 1rem;
+  margin-bottom: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-right: 2rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// End of Author Section
+//--------------------------------------------------------------
+// Quote Section
+
+.ArticleQuote {
+  padding: 2rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 5rem 0;
+  }
+
+  &--inner {
+  }
+}
+
+.ArticleQuote__text {
+  font-weight: $type-mid;
+  line-height: 1.5;
+}
+
+// End of Quote Section
+//--------------------------------------------------------------
+// Article Text
+
+.ArticleText {
+}
+
+.ArticleText__desc {
+  span {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// End of Article Text
+//--------------------------------------------------------------
+// Hero Section
+
+.ArticleHero {
+  @include center-between-column;
+  min-height: auto;
+  margin-top: 8rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-top: 0;
+    @include center-between;
+    min-height: 95vh;
+  }
+}
+
+.ArticleHero__image {
+  width: 100%;
+  height: initial;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 50%;
+    height: 85vh;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ArticleHero__title-group {
+  width: 100%;
+  @include center-center;
+  margin-top: 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  &--inner {
+    max-width: 90%;
+    margin: 0 auto;
+    width: 90%;
+
+    @media (min-width: #{$screen-lg}) {
+      max-width: 80%;
+      width: inherit;
+    }
+  }
+}
+
+.ArticleHero__categories {
+  @include center-start;
+}
+
+.ArticleHero__category {
+  margin: 0.5rem 0.5rem 0 0;
+  background: var(--color-light-grey);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: $type-mid;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.ArticleHero__title {
+  margin-bottom: 1.5rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 2rem;
+  }
+}
+
+.ArticleHero__date {
+  color: var(--color-grey);
+}
+
+.ArticleHero__btn {
+  @include center-start;
+}
+
+// End of Article Hero
+//--------------------------------------------------------------
+// Start of Article Tip
+
+.ArticleTip {
+  border-left: 3px solid;
+  padding: 2rem 3rem;
+  margin: 4rem 0 2rem;
+  position: relative;
+  background: var(--color-light-grey);
+  border-radius: 0.75rem;
+  border-color: var(--color-blue);
+}
+
+.ArticleTip__title {
+  font-weight: $type-mid;
+}
+
+.ArticleTip__svg {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  left: 0px;
+  width: 5rem;
+  height: 5rem;
+  transform: translate(calc(-50% - 1.5px), -50%);
+  padding: 1rem;
+  background: var(--color-white);
+  border-radius: 50%;
+
+  svg {
+    stroke: var(--color-blue);
+  }
+}
+
+.ArticleTip__desc {
+}
+
+// End of Article Tip
+//--------------------------------------------------------------
+// Start of Article Video
+
+.ArticleVideo {
+  padding: 2rem 0;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+// End of Article Video
+//--------------------------------------------------------------
+// Start of Article Intro
+
+.ArticleIntro {
+  // border-bottom: 1px solid var(--color-light-grey);
+  &--inner {
+    padding: 0;
+
+    @media (min-width: #{$screen-lg}) {
+      padding: 2rem 0;
+    }
+  }
+}
+
+.ArticleIntro__title {
+  text-align: left;
+  line-height: 1.5;
+  font-weight: 300;
+
+  @media (min-width: #{$screen-lg}) {
+    text-align: center;
+  }
+}
+
+.ArticleIntro__read-time {
+  text-align: left;
+  margin-bottom: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+// End of Article Intro
+//--------------------------------------------------------------
+// Start of Article Images
+
+.ArticleImages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 5rem 0;
+  }
+}
+
+.ArticleImages__image-group {
+  margin: 1rem 0;
+  flex: 0 0 100%;
+
+  @media (min-width: #{$screen-md}) {
+    flex: 0 0 calc(50% - 2rem);
+    margin: 1rem;
+  }
+}
+
+.ArticleImages__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.ArticleImages__caption {
+  margin: 1rem 0;
+}
+
+// End of Article Images
+//--------------------------------------------------------------
+// Start of Article Holder
+
+.ArticleHolder {
+  margin: 2rem auto 5rem;
+  width: 95%;
+}
+
+.ArticleHolder__grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 95%;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 100%;
+  }
+
+  .PostItem {
+    flex: 0 0 100%;
+    min-width: 100%;
+
+    @media (min-width: #{$screen-md}) {
+      flex: 0 0 50%;
+      min-width: 50%;
+    }
+
+    @media (min-width: #{$screen-lg}) {
+      flex: 0 0 25%;
+      min-width: 25%;
+    }
+  }
+}
+
+.ArticleHolder__title {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 4rem;
+  }
+}
+
+// End of Article Holder
+//--------------------------------------------------------------
+// Start of Article Extras
+
+.Article__socials {
+  right: 0;
+  position: fixed;
+  bottom: 50%;
+  z-index: 9;
+  @include center-center-column;
+  padding: 1rem;
+  transform: translateY(50%);
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 1rem 2rem 1rem 1rem;
+  }
+
+  .social__social {
+    display: block !important;
+    margin-bottom: 2rem;
+  }
+
+  i {
+    font-size: 2rem;
+    display: block !important;
+  }
+}
+
+.Article__scroll-button {
+  position: fixed;
+  background: var(--color-black);
+  padding: 1.65rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  bottom: clamp(1.33333rem, 1.90476vw, 1.77778rem);
+  right: clamp(0.5rem, 1.90476vw, 1.77778rem);
+  left: auto;
+  font-size: 0;
+  z-index: 4;
+  cursor: pointer;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 2.5rem 2rem;
+    left: clamp(1.33333rem, 1.90476vw, 1.77778rem);
+    right: auto;
+  }
+}
+
+.Article__category {
+  @include center-start;
+  margin-bottom: 1rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-bottom: 1.5rem;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    margin-right: 1rem;
+  }
+}
+
+.Article__socials {
+}
+
+// End of Article Extras
+//--------------------------------------------------------------
+//

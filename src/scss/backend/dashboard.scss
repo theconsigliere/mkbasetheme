@@ -1,0 +1,59 @@
+/*********************************
+* Custom DM Admin Welcome Panel *
+*********************************/
+/* Welcome Panel */
+.WelcomePanel {
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  background: #ffffff5e url('../images/welcome-banner.jpg') no-repeat center !important;
+  background-size: cover !important;
+  background-position: 100%;
+  background-blend-mode: overlay;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.WelcomePanel__header {
+  height: 15rem;
+}
+
+.WelcomePanel__header img {
+  padding: 1rem;
+}
+
+.WelcomePanel__column-group {
+  background: #ffffffb5;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.WelcomePanel__column {
+  flex: 0 0 30%;
+}
+
+.WelcomePanel__column-content {
+  padding-top: 1rem;
+}
+.welcome-panel-icon-styles,
+.welcome-panel-icon-pages,
+.welcome-panel-icon-layout {
+  background-color: black;
+}
+
+// Loom Widget
+.Dashboard__loomWidget {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dmtheme_dashboard_widget {
+  background: black;
+  color: white;
+
+  .Dashboard__loomWidget-title,
+  .ui-sortable-handle {
+    color: white;
+  }
+}

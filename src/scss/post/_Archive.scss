@@ -1,0 +1,219 @@
+// Archive Global
+//--------------------------------------------------------------
+
+.Archive {
+}
+
+.Archive__container {
+}
+
+// End of Archive Global
+//--------------------------------------------------------------
+// Archive Hero
+
+.ArchiveHero {
+  min-height: 60vh;
+  @include center-end-column;
+
+  @media (min-width: #{$screen-lg}) {
+    min-height: 60rem;
+  }
+
+  &--inner {
+    padding: 2rem 0;
+  }
+}
+
+.ArchiveHero__title {
+  margin-bottom: 4.5rem;
+}
+
+.ArchiveHero__desc {
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+
+  @media (min-width: #{$screen-lg}) {
+    width: 75%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 65%;
+  }
+
+  @media (min-width: #{$screen-xxl}) {
+    max-width: 60%;
+  }
+}
+
+.ArchiveHero__btn {
+  margin-bottom: 4rem;
+}
+
+.ArchiveHero__underline {
+}
+
+.ArchiveHero__underline-text {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+// End of Article Hero
+//--------------------------------------------------------------
+// Start of Archive Filter
+
+.ArchiveGrid__filter {
+  margin: 2rem 1rem;
+
+  &--inner {
+    @include center-start;
+    flex-wrap: wrap;
+  }
+}
+
+.ArchiveGrid__filter-item {
+  margin-right: 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin-right: 4rem;
+  }
+}
+.ArchiveGrid__filter-select {
+  @extend .h5 !optional;
+  margin-right: 2rem;
+  color: var(--color-grey);
+  text-transform: capitalize;
+  transition: color 0.4s ease-in-out;
+
+  &:after {
+    content: '⟶';
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 0.5em;
+    text-decoration: none;
+  }
+
+  &.js-active {
+    color: var(--color-black);
+  }
+
+  &:hover {
+    color: var(--color-black);
+  }
+}
+
+// End of Archive Filter
+//--------------------------------------------------------------
+// Start of Archive Grid
+
+.ArchiveGrid {
+  margin-bottom: 2rem;
+  &--inner {
+    padding-bottom: 2rem;
+  }
+}
+
+.ArchiveGrid__holder-outer {
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.ArchiveGrid__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-white);
+  pointer-events: none;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+
+  &.js-fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+  }
+
+  &.js-fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+  }
+}
+
+.ArchiveGrid__holder {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--2 {
+    .PostItem {
+      flex: 0 0 100%;
+
+      @media (min-width: #{$screen-md}) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        flex: 0 0 50%;
+      }
+    }
+  }
+  &--3 {
+    .PostItem {
+      flex: 0 0 100%;
+
+      @media (min-width: #{$screen-md}) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        flex: 0 0 33.333%;
+      }
+    }
+  }
+  &--4 {
+    .PostItem {
+      flex: 0 0 100%;
+
+      @media (min-width: #{$screen-md}) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        flex: 0 0 25%;
+      }
+    }
+  }
+  &--5 {
+    .PostItem {
+      flex: 0 0 100%;
+
+      @media (min-width: #{$screen-md}) {
+        flex: 0 0 50%;
+      }
+
+      @media (min-width: #{$screen-lg}) {
+        flex: 0 0 20%;
+      }
+    }
+  }
+}
+
+.ArchiveGrid__pagination {
+  margin: 2rem 0;
+  &--inner {
+    @include center-center;
+  }
+}
+
+.ArchiveGrid__pagination-btn {
+  margin: 0 1rem;
+  &--prev {
+  }
+
+  &--next {
+  }
+}
+
+// End of Archive Grid
+//--------------------------------------------------------------

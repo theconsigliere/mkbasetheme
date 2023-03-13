@@ -1,0 +1,143 @@
+// Text Section
+// ----------------------------------------------
+
+.TitleSection {
+  padding: 5rem 0;
+  text-align: center;
+  //  padding-top: 0;
+}
+
+.TitleSection__inner {
+  margin: 0 auto 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    margin: 0 auto 5rem;
+  }
+
+  &--left {
+    @include start-center-column;
+    padding-left: 5rem;
+
+    @media (min-width: #{$screen-lg}) {
+      padding-left: 10rem;
+    }
+
+    * {
+      text-align: left;
+    }
+  }
+  &--right {
+    @include end-center-column;
+    padding-right: 5rem;
+
+    @media (min-width: #{$screen-lg}) {
+      padding-right: 10rem;
+    }
+
+    * {
+      text-align: right;
+    }
+  }
+  &--middle {
+    @include center-center-column;
+
+    * {
+      text-align: center;
+    }
+  }
+}
+
+.TitleSection__title {
+}
+.TitleSection__subtitle {
+}
+
+.TitleSection__desc {
+  max-width: 80%;
+  margin-bottom: 2rem;
+
+  @media (min-width: #{$screen-lg}) {
+    max-width: 75%;
+  }
+
+  @media (min-width: #{$screen-xl}) {
+    max-width: 65%;
+  }
+}
+
+.TitleSection__btn {
+}
+
+// End of Text Section
+// ----------------------------------------------
+// Quote
+
+.Quote {
+  @include center-center-column;
+  margin: 3rem auto;
+
+  @media (min-width: #{$screen-lg}) {
+    @include center-center;
+    margin: 5rem auto;
+  }
+}
+
+.Quote__title {
+  line-height: 1.5;
+}
+
+// End of Quote
+// ----------------------------------------------
+// Content Section
+
+.ContentSection {
+  padding: 2rem 0;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 5rem 0;
+  }
+}
+.ContentSection__inner {
+  padding: 2rem 0;
+  @include center-center-column;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 5rem 0;
+    @include center-between;
+    max-width: var(--content-width);
+    margin: 0 auto;
+  }
+}
+
+.ContentSection__item {
+  padding: 0;
+
+  @media (min-width: #{$screen-lg}) {
+    padding: 0 2rem;
+  }
+
+  &--left {
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 40%;
+    }
+  }
+  &--right {
+    width: 100%;
+
+    @media (min-width: #{$screen-lg}) {
+      width: 60%;
+    }
+  }
+}
+
+.ContentSection__title {
+}
+.ContentSection__desc {
+}
+
+// End of Content Section
+// ----------------------------------------------

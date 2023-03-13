@@ -1,0 +1,47 @@
+{
+  "name": "DMBaseTheme",
+  "version": "5.0.0",
+  "description": "Dirty Martini WordPress theme for websites.",
+  "main": ".prettierrc.js",
+  "keywords": [],
+  "author": "Maxwell Kirwin",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm install && webpack --watch",
+    "dev": "webpack --watch",
+    "prod": "rm -r node_modules/"
+  },
+  "dependencies": {
+    "gsap": "file:gsap-bonus.tgz",
+    "hotkeys-js": "^3.10.0",
+    "imagesloaded": "^4.1.4",
+    "swiper": "^8.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.7.1",
+    "dotenv-webpack": "^7.1.1",
+    "esbuild-loader": "^2.18.0",
+    "file-loader": "^6.2.0",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

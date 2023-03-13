@@ -1,0 +1,1068 @@
+{
+    "key": "group_5ed41a3cef2f4",
+    "title": "Header",
+    "fields": [
+        {
+            "key": "field_62a6634798bff",
+            "label": "Disclaimer",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ed41a3d24d89",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "If no header layout is selected. Default header will show, with a simple mobile menu on tablets and mobiles.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ed41a3d24d89",
+            "label": "Header Layouts",
+            "name": "header_layouts",
+            "type": "flexible_content",
+            "instructions": "Choose a Header for your project",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5d9c4e2ce36cf": {
+                    "key": "layout_5d9c4e2ce36cf",
+                    "name": "logo_left",
+                    "label": "Logo Left - Menu Right",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62a66206d6342",
+                            "label": "Disclaimer",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Header Layout: Logo Left\r\n\r\nDisplays logo on the left of the header with the navigation + socials on the right. On desktop and tablet Mobile menu is displayed.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5ed41ae38820f",
+                            "label": "Logo",
+                            "name": "logo",
+                            "type": "image",
+                            "instructions": "Insert your logo here, we recommend SVG, PNG or JPG",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "post-thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_62a743b4fa784",
+                            "label": "Menu",
+                            "name": "menu",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62a743b4fa785",
+                                    "label": "Menu Item",
+                                    "name": "menu_item",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_62a743b4fa786",
+                                    "label": "Does Menu Item Have Children?",
+                                    "name": "has_children",
+                                    "type": "select",
+                                    "instructions": "If Link has an associated sub menu include below.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "no": "No",
+                                        "yes": "Yes"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_62a743b4fa787",
+                                    "label": "Sub Menu",
+                                    "name": "sub_menu",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_62a743b4fa786",
+                                                "operator": "==",
+                                                "value": "yes"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add Sub Menu Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_62a743b4fa788",
+                                            "label": "Sub Menu Item",
+                                            "name": "sub_menu_item",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_62a990b69552b",
+                            "label": "Use existing menu for mobile?",
+                            "name": "select_menu",
+                            "type": "select",
+                            "instructions": "Use exisitng menu for mobile or choose a different menu to display on mobile and tablet screens",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Use existing menu",
+                                "no": "Show a new menu for mobile screens"
+                            },
+                            "default_value": "yes",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_61f11bd4fce69",
+                            "label": "Mobile Menu",
+                            "name": "mobile_menu",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_62a990b69552b",
+                                        "operator": "==",
+                                        "value": "no"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61f11be2fce6a",
+                                    "label": "Menu Item",
+                                    "name": "menu_item",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_61f11beffce6b",
+                                    "label": "Does Menu Item Have Children?",
+                                    "name": "has_children",
+                                    "type": "select",
+                                    "instructions": "If Link has an associated sub menu include below.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "no": "No",
+                                        "yes": "Yes"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_61f11c10fce6c",
+                                    "label": "Sub Menu",
+                                    "name": "sub_menu",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61f11beffce6b",
+                                                "operator": "==",
+                                                "value": "yes"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add Sub Menu Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_61f11c17fce6d",
+                                            "label": "Sub Menu Item",
+                                            "name": "sub_menu_item",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5ed52312d9add",
+                            "label": "Show Socials ?",
+                            "name": "show_socials",
+                            "type": "select",
+                            "instructions": "Show social links, socials are edited \/ accessed from the sidebar. <a href=\"l\/wp-admin\/admin.php?page=acf-options-socials\">Theme Settings > Socials<\/a>",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "default_value": "yes",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ed52bb09279c": {
+                    "key": "layout_5ed52bb09279c",
+                    "name": "logo_middle",
+                    "label": "Logo Middle - Fullscreen Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62ab410eade21",
+                            "label": "Disclaimer",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Logo is displayed in the center, with menu toggle on the left and button on the right.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_62ab40a8ade1b",
+                            "label": "Menu",
+                            "name": "menu",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62ab40a8ade1c",
+                                    "label": "Menu Item",
+                                    "name": "menu_item",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_62ab40a8ade1d",
+                                    "label": "Does Menu Item Have Children?",
+                                    "name": "has_children",
+                                    "type": "select",
+                                    "instructions": "If Link has an associated sub menu include below.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "no": "No",
+                                        "yes": "Yes"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_62ab40a8ade1e",
+                                    "label": "Sub Menu",
+                                    "name": "sub_menu",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_62ab40a8ade1d",
+                                                "operator": "==",
+                                                "value": "yes"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add Sub Menu Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_62ab40a8ade1f",
+                                            "label": "Sub Menu Item",
+                                            "name": "sub_menu_item",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5ed52bb09279d",
+                            "label": "Logo",
+                            "name": "logo",
+                            "type": "image",
+                            "instructions": "Insert your logo here, we recommend SVG, PNG or JPG",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "post-thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_62ab40bfade20",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "link",
+                            "instructions": "Displayed on the right. Defaults to a contact button with \/contact link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_62ab3b35ade1a",
+                            "label": "Show Socials ?",
+                            "name": "show_socials",
+                            "type": "select",
+                            "instructions": "Show social links, socials are edited \/ accessed from the sidebar. <a href=\"l\/wp-admin\/admin.php?page=acf-options-socials\">Theme Settings > Socials<\/a>",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "default_value": "yes",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61f1191a4b49c": {
+                    "key": "layout_61f1191a4b49c",
+                    "name": "mega_menu",
+                    "label": "Mega Menu",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62ac9480c59a1",
+                            "label": "Disclaimer",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Header Layout: Mega Menu\r\n\r\nDisplays logo on the left of the header with the navigation on the right. Each menu item has the option of making it a mega menu dropdown, on each dropdown you have the option for menu columns and a featured image with link On desktop and tablet Mobile menu is displayed with socials.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_61f119c94b49d",
+                            "label": "Logo",
+                            "name": "logo",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_62ac9044d455c",
+                            "label": "Menu",
+                            "name": "menu",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62ac9044d455d",
+                                    "label": "Menu Item",
+                                    "name": "menu_item",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_62ac9044d455e",
+                                    "label": "Create Mega menu dropdown?",
+                                    "name": "has_children",
+                                    "type": "select",
+                                    "instructions": "If Link has an associated sub menu include below.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "no": "No",
+                                        "yes": "Yes"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_62ac9044d455f",
+                                    "label": "Mega Menu Dropdown",
+                                    "name": "mega_menu_dropdown",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_62ac9044d455e",
+                                                "operator": "==",
+                                                "value": "yes"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_62ac9133d4561",
+                                            "label": "Mega Menu Image",
+                                            "name": "mega_menu_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "id",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_62ac961b0c4c7",
+                                            "label": "Mega Menu Image Link",
+                                            "name": "mega_menu_image_link",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        },
+                                        {
+                                            "key": "field_62ac9250d4563",
+                                            "label": "Mega Menu Columns",
+                                            "name": "mega_menu_columns",
+                                            "type": "flexible_content",
+                                            "instructions": "Add a number of Columns",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layouts": {
+                                                "layout_62ac92b1a5cb0": {
+                                                    "key": "layout_62ac92b1a5cb0",
+                                                    "name": "column",
+                                                    "label": "Column",
+                                                    "display": "block",
+                                                    "sub_fields": [
+                                                        {
+                                                            "key": "field_62ac92c6d4564",
+                                                            "label": "Column Title",
+                                                            "name": "column_title",
+                                                            "type": "text",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "default_value": "",
+                                                            "placeholder": "",
+                                                            "prepend": "",
+                                                            "append": "",
+                                                            "maxlength": ""
+                                                        },
+                                                        {
+                                                            "key": "field_62ac92d5d4565",
+                                                            "label": "Menu",
+                                                            "name": "menu",
+                                                            "type": "repeater",
+                                                            "instructions": "",
+                                                            "required": 0,
+                                                            "conditional_logic": 0,
+                                                            "wrapper": {
+                                                                "width": "",
+                                                                "class": "",
+                                                                "id": ""
+                                                            },
+                                                            "collapsed": "",
+                                                            "min": 0,
+                                                            "max": 0,
+                                                            "layout": "table",
+                                                            "button_label": "Add Menu Item",
+                                                            "sub_fields": [
+                                                                {
+                                                                    "key": "field_62ac930fd4566",
+                                                                    "label": "Menu Item",
+                                                                    "name": "menu_item",
+                                                                    "type": "link",
+                                                                    "instructions": "",
+                                                                    "required": 0,
+                                                                    "conditional_logic": 0,
+                                                                    "wrapper": {
+                                                                        "width": "",
+                                                                        "class": "",
+                                                                        "id": ""
+                                                                    },
+                                                                    "return_format": "array"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "min": "",
+                                                    "max": ""
+                                                }
+                                            },
+                                            "button_label": "Add Column",
+                                            "min": "",
+                                            "max": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_62ac980abce34",
+                            "label": "Mobile Menu",
+                            "name": "mobile_menu",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add Menu Item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62ac980abce35",
+                                    "label": "Menu Item",
+                                    "name": "menu_item",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_62ac980abce36",
+                                    "label": "Does Menu Item Have Children?",
+                                    "name": "has_children",
+                                    "type": "select",
+                                    "instructions": "If Link has an associated sub menu include below.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "no": "No",
+                                        "yes": "Yes"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_62ac980abce37",
+                                    "label": "Sub Menu",
+                                    "name": "sub_menu",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_62ac980abce36",
+                                                "operator": "==",
+                                                "value": "yes"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add Sub Menu Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_62ac980abce38",
+                                            "label": "Sub Menu Item",
+                                            "name": "sub_menu_item",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_62ac94d8c59a2",
+                            "label": "Show Socials ?",
+                            "name": "show_socials",
+                            "type": "select",
+                            "instructions": "Show social links, socials are edited \/ accessed from the sidebar. <a href=\"l\/wp-admin\/admin.php?page=acf-options-socials\">Theme Settings > Socials<\/a>",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "yes": "Yes",
+                                "no": "No"
+                            },
+                            "default_value": "yes",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Menu",
+            "min": "",
+            "max": 1
+        },
+        {
+            "key": "field_61813d46ce954",
+            "label": "Header Width",
+            "name": "header_width",
+            "type": "range",
+            "instructions": "Give the width of the header component.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 85,
+            "min": 50,
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_62b229f77f37f",
+            "label": "Reveal Header",
+            "name": "reveal_header",
+            "type": "select",
+            "instructions": "When you scroll down hide header, reveal when scrolling up. This is removed on mobile & tablet screens.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "activate": "Activate",
+                "deactivate": "Deactivate"
+            },
+            "default_value": "deactivate",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62dd8cbe0c5b8",
+            "label": "Show Search Icon",
+            "name": "show_search",
+            "type": "select",
+            "instructions": "To show a search icon just select show.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "show": "Show",
+                "hide": "Hide"
+            },
+            "default_value": "hide",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_62dd992bbd8c2",
+            "label": "Search Link",
+            "name": "search_link",
+            "type": "link",
+            "instructions": "Link to search page",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62dd8cbe0c5b8",
+                        "operator": "==",
+                        "value": "show"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669386816
+}
