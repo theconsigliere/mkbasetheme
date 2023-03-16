@@ -29,6 +29,10 @@ class App {
         window._wpLoadBlockEditor.then(this.runGutenberg.bind(this))
         return
       }
+      
+      // you are on the frontend but wp object wiht emoji is still registering
+      if (wp.emoji) this.initFrontend()
+      
     } else {
       // FRONTEND
       this.initFrontend()
