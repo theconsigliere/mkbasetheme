@@ -23,21 +23,24 @@ import Fade from './Transitions/Fade'
 class App {
   constructor() {
     // Checking if we are viewing on backend or not
+    // turn on for gutenberg
     if (typeof wp != "undefined") {
       if (wp.blockEditor) {
         // GUTENBERG
+        console.log("block editor")
         window._wpLoadBlockEditor.then(this.runGutenberg.bind(this))
         return
       }
-
-      // if backend don't run
-      // you are on the frontend but wp object wiht emoji is still registering
-      typeof wp.editor != "undefined" ? "" : this.initFrontend
+      // you are on the frontend but wp object with emoji is still registering
+      if (wp.emoji || typeof wp.domReady) {
+        return this.initFrontend()
+      }
     } else {
       // FRONTEND
       this.initFrontend()
     }
   }
+
 
   initFrontend() {
     this.consoleMessage()
