@@ -28,7 +28,7 @@ class App {
       // BACKEND
       if (wp.blockEditor) {
         // GUTENBERG
-        console.log("block editor")
+        console.log("Backend: Gutenberg")
         window._wpLoadBlockEditor.then(this.runGutenberg.bind(this))
         return
       } else {
