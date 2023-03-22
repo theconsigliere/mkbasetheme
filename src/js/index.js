@@ -32,13 +32,10 @@ class App {
         window._wpLoadBlockEditor.then(this.runGutenberg.bind(this))
         return
       } else {
-        //  console.log(wp)
-        //  console.log(Object.keys(wp))
-        // front end but landed here by accident
-        // Backend but not gutenberg
-        wp.domReady
-          ? this.initFrontend()
-          : console.log("Backend: Not Gutenberg")
+        // console.log(wp, Object.keys(wp), window.acf)
+        // Frontend but landed here by accident
+        // Backend but not Gutenberg
+        window.acf ? console.log("Backend: Not Gutenberg") : this.initFrontend()
       }
     } else {
       console.log("running now")
