@@ -25,17 +25,23 @@ class App {
     // Checking if we are viewing on backend or not
     // turn on for gutenberg
     if (typeof wp != "undefined") {
+      // BACKEND
       if (wp.blockEditor) {
         // GUTENBERG
         console.log("block editor")
         window._wpLoadBlockEditor.then(this.runGutenberg.bind(this))
         return
-      }
-      // you are on the frontend but wp object with emoji is still registering
-      if (wp.emoji || typeof wp.domReady) {
-        return this.initFrontend()
+      } else {
+        //  console.log(wp)
+        //  console.log(Object.keys(wp))
+        // front end but landed here by accident
+        // Backend but not gutenberg
+        wp.domReady
+          ? this.initFrontend()
+          : console.log("Backend: Not Gutenberg")
       }
     } else {
+      console.log("running now")
       // FRONTEND
       this.initFrontend()
     }
